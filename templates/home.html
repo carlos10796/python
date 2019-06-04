@@ -1,0 +1,175 @@
+{% extends "layout.html" %} {% block content %}
+<div class="jumbotron jumbotron bg-cover">
+  <div class="overlay"></div>
+  <div class="container">
+    <h1 class="display-3 mb-1">Turismo de Lujo</h1>
+    <p class="lead">Posted on <span>23 September 2017</span></p>
+  </div>
+</div>
+
+<hr />
+
+<div class="container">
+  <br />
+  <h4 class="text-center display-1 text-white">Paquetes Turísticos</h4>
+  <br />
+  <div class="row" id="ads">
+    <!-- Category Card -->
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-image">
+          <span class="card-notify-badge"
+            >Acoya Curacao, resort, spa & villas</span
+          >
+          <span class="card-notify-year">2018</span>
+          <img
+            class="img-fluid"
+            src="../static/image/curasao.jpg"
+            alt="Alternate Text"
+          />
+        </div>
+        <div class="card-image-overlay m-auto">
+          <span class="card-detail-badge">Travel</span>
+          <span class="card-detail-badge">$2,000.00</span>
+          <span class="card-detail-badge">2x1</span>
+        </div>
+        <div class="card-body text-center">
+          <div class="ad-title m-auto">
+            <h6>
+              Resort, spa & villas, un resort todo incluido en el corazón de
+              Curasao, Oferta por fin de año
+            </h6>
+          </div>
+          <a class="ad-btn" href="#">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-image">
+          <span class="card-notify-badge"
+            >Lago Oberon, Tasmania, Australia</span
+          >
+          <span class="card-notify-year">2017</span>
+          <img
+            class="img-fluid"
+            src="../static/image/Lago_Oberon.jpg"
+            alt="Alternate Text"
+            width="500px"
+            height="500px"
+          />
+        </div>
+        <div class="card-image-overlay m-auto">
+          <span class="card-detail-badge">Travel</span>
+          <span class="card-detail-badge">$1,000.00</span>
+          <span class="card-detail-badge">2x1</span>
+        </div>
+        <div class="card-body text-center">
+          <div class="ad-title m-auto">
+            <h6>
+              Lago oberon en western arthur range, parque nacional del suroeste,
+              Tasmania, Australia
+            </h6>
+          </div>
+          <a class="ad-btn" href="#">View</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-image">
+          <span class="card-notify-badge">Archipiélago de Lofoten</span>
+          <span class="card-notify-year">2018</span>
+          <img
+            class="img-fluid"
+            src="../static/image/aurora.jpg"
+            alt="Alternate Text"
+            width="500px"
+            height="500px"
+          />
+        </div>
+        <div class="card-image-overlay m-auto">
+          <span class="card-detail-badge">Travel</span>
+          <span class="card-detail-badge">$2,500.00</span>
+          <span class="card-detail-badge">2x1</span>
+        </div>
+        <div class="card-body text-center">
+          <div class="ad-title m-auto">
+            <h6>
+              Aurora Boreal sobre el fiordo en el hermoso archipiélago de
+              Lofoten, en el norte de Noruega.
+            </h6>
+          </div>
+          <a class="ad-btn" href="#">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!--***************************************************************************-->
+
+    <div class="contenedor">
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="../static/image/1.jpg" class="frontal" alt="" />
+            <figcaption class="trasera">
+              <h2 class="titulo">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut,
+                vero!
+              </h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo
+                architecto nihil corrupti.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="../static/image/2.jpg" class="frontal" alt="" />
+            <figcaption class="trasera">
+              <h2 class="titulo">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut,
+                vero!
+              </h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo
+                architecto nihil corrupti.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="../static/image/3.jpg" class="frontal" alt="" />
+            <figcaption class="trasera">
+              <h2 class="titulo">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut,
+                vero!
+              </h2>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo
+                architecto nihil corrupti.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

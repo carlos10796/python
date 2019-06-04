@@ -1,0 +1,140 @@
+{% extends "layout.html" %} {% block content %}
+
+<!-- Carousel -->
+<header>
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Diapositiva 1: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+      <div
+        class="carousel-item active"
+        style="background-image: url('../static/image/imagen1.jpg')"
+      >
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Primera diapositiva</h3>
+          <p>Esta es una descripción para la primera diapositiva.</p>
+        </div>
+      </div>
+      <!-- Diapositiva dos: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+      <div
+        class="carousel-item"
+        style="background-image: url('../static/image/imagen2.jpg')"
+      >
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Segunda diapositiva</h3>
+          <p>Esta es una descripción para la segunda diapositiva.</p>
+        </div>
+      </div>
+      <!-- Diapositiva tres: establece la imagen de fondo para esta diapositiva en la línea siguiente -->
+      <div
+        class="carousel-item"
+        style="background-image: url('../static/image/imagen3.jpg')"
+      >
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Tercera diapositiva</h3>
+          <p>Esta es una descripción para la tercera diapositiva.</p>
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</header>
+<!-- Fin del carousel -->
+
+<!-- contenido de la pagina -->
+
+<section class="py-5">
+  <div class="container">
+    <h1 class="text-center display-4">
+      Galería de imágenes con Bootstrap y JavaScrip
+    </h1>
+    <!-- Colocamos un identificador para las tarjetas (card) llado galeria -->
+    <div class="card-columns" id="galeria">
+      <!-- código JavaScript -->
+      <script>
+        /*creamos una variabla para almacenar una colección de imagenes lo que se conoce como arreglo como todos los archivos tienen el mismo formato no se los coloco de lo contrario tendria que colocarlo, si se tratara de texto tendría que encerrar la palabra entre comillas ejemplo "casa" */
+        var imagenes = [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ];
+
+        /*Creamos una variable y le asignamos el id del identidificador que le colocamos a la clase card-columns a través del DOM document.getElementById('galeria')*/
+        var galeria = document.getElementById("galeria");
+
+        /*vamos a realizar un ciclo for para que repita una acción tantas veces se le indique, card va a contener todo lo que tiene la variable imagenes (arreglo) */
+        for (card of imagenes) {
+          /*Vamos a insertar un condigo en HTML con la propiedad innerHTML del DOM, recuerda que galeria es el idetificador del div con la clase galeria que contiene todo el codigo de la card*/
+          /*importante las comillas invertidas nos permiten hacer una plantilla para agregar código HTML con el signo + antes del = estamos concatenando el código*/
+          galeria.innerHTML += `
+            <div class="card">
+                <a href="" data-toggle="modal" data-target="#id${card}">
+                    <img src="../static/image/${card}.jpg" alt="" class="card-img-top">
+                </a>
+
+                   <div class="modal fade" id="id${card}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="../static/image/${card}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `;
+        }
+      </script>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
